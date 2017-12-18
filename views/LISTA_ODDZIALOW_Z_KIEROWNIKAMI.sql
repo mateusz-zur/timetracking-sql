@@ -1,0 +1,8 @@
+--------------------------------------------------------
+--  DDL for View LISTA_ODDZIALOW_Z_KIEROWNIKAMI
+--------------------------------------------------------
+
+  CREATE OR REPLACE FORCE VIEW "ZUR"."LISTA_ODDZIALOW_Z_KIEROWNIKAMI" ("IMIE", "NAZWISKO", "MIASTO") AS 
+  SELECT IMIE, NAZWISKO, ODDZIAL.MIASTO FROM PRACOWNIK
+INNER JOIN ODDZIAL ON PRACOWNIK.ID=ODDZIAL.KIEROWNIK
+;
